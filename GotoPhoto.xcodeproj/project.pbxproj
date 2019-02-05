@@ -7,13 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7023B0FB21DB05D000EB22CE /* PhotoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023B0FA21DB05D000EB22CE /* PhotoLocation.swift */; };
+		7023B0FD21DB08AA00EB22CE /* PhotoDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023B0FC21DB08AA00EB22CE /* PhotoDatabase.swift */; };
+		7023B10021DB0D7900EB22CE /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7023B0FE21DB0D7900EB22CE /* Realm.framework */; };
+		7023B10121DB0D7900EB22CE /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7023B0FF21DB0D7900EB22CE /* RealmSwift.framework */; };
+		7023B10321DDAECE00EB22CE /* ChooseLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023B10221DDAECE00EB22CE /* ChooseLocationTableViewController.swift */; };
+		7023B10521DDAEE300EB22CE /* ChooseLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023B10421DDAEE300EB22CE /* ChooseLocationTableViewCell.swift */; };
+		7023B10721DDB21000EB22CE /* ChoosePhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023B10621DDB21000EB22CE /* ChoosePhotoTableViewCell.swift */; };
+		7023B10921DDB23E00EB22CE /* ChoosePhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023B10821DDB23E00EB22CE /* ChoosePhotoTableViewController.swift */; };
+		7023B10C21E9A3F000EB22CE /* UserPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023B10B21E9A3F000EB22CE /* UserPhotoTableViewCell.swift */; };
+		708585032206E9070033FFA5 /* PortalReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708585022206E9070033FFA5 /* PortalReader.swift */; };
 		70F13A4B21CD1466009077DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A4A21CD1466009077DD /* AppDelegate.swift */; };
-		70F13A4D21CD1466009077DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A4C21CD1466009077DD /* ViewController.swift */; };
+		70F13A4D21CD1466009077DD /* PhotoLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A4C21CD1466009077DD /* PhotoLocationViewController.swift */; };
 		70F13A5021CD1466009077DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F13A4E21CD1466009077DD /* Main.storyboard */; };
 		70F13A5221CD1468009077DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70F13A5121CD1468009077DD /* Assets.xcassets */; };
 		70F13A5521CD1468009077DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F13A5321CD1468009077DD /* LaunchScreen.storyboard */; };
 		70F13A6021CD1469009077DD /* GotoPhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A5F21CD1469009077DD /* GotoPhotoTests.swift */; };
 		70F13A6B21CD1469009077DD /* GotoPhotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A6A21CD1469009077DD /* GotoPhotoUITests.swift */; };
+		70F13A7B21CE18BE009077DD /* ArItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A7A21CE18BE009077DD /* ArItemViewController.swift */; };
+		70F13A9121CE1A78009077DD /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A8121CE1A78009077DD /* ARAnnotation.swift */; };
+		70F13A9221CE1A78009077DD /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A8221CE1A78009077DD /* ARTrackingManager.swift */; };
+		70F13A9321CE1A78009077DD /* ARPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A8321CE1A78009077DD /* ARPresenter.swift */; };
+		70F13A9421CE1A78009077DD /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A8421CE1A78009077DD /* ARAnnotationView.swift */; };
+		70F13A9521CE1A78009077DD /* ARPresenterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A8521CE1A78009077DD /* ARPresenterTransform.swift */; };
+		70F13A9621CE1A78009077DD /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A8621CE1A78009077DD /* ARConfiguration.swift */; };
+		70F13A9721CE1A78009077DD /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A8821CE1A78009077DD /* CameraView.swift */; };
+		70F13A9821CE1A78009077DD /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A8921CE1A78009077DD /* ARViewController.swift */; };
+		70F13A9921CE1A78009077DD /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A8B21CE1A78009077DD /* DebugMapViewController.swift */; };
+		70F13A9A21CE1A78009077DD /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70F13A8D21CE1A78009077DD /* hdar_close@3x.png */; };
+		70F13A9B21CE1A78009077DD /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70F13A8E21CE1A78009077DD /* hdar_close@2x.png */; };
+		70F13A9C21CE1A78009077DD /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70F13A8F21CE1A78009077DD /* DebugMapViewController.xib */; };
+		70F13A9D21CE1A78009077DD /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 70F13A9021CE1A78009077DD /* hdar_close.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +58,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7023B0FA21DB05D000EB22CE /* PhotoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLocation.swift; sourceTree = "<group>"; };
+		7023B0FC21DB08AA00EB22CE /* PhotoDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDatabase.swift; sourceTree = "<group>"; };
+		7023B0FE21DB0D7900EB22CE /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		7023B0FF21DB0D7900EB22CE /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		7023B10221DDAECE00EB22CE /* ChooseLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLocationTableViewController.swift; sourceTree = "<group>"; };
+		7023B10421DDAEE300EB22CE /* ChooseLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLocationTableViewCell.swift; sourceTree = "<group>"; };
+		7023B10621DDB21000EB22CE /* ChoosePhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePhotoTableViewCell.swift; sourceTree = "<group>"; };
+		7023B10821DDB23E00EB22CE /* ChoosePhotoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePhotoTableViewController.swift; sourceTree = "<group>"; };
+		7023B10B21E9A3F000EB22CE /* UserPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		708585022206E9070033FFA5 /* PortalReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortalReader.swift; sourceTree = "<group>"; };
 		70F13A4721CD1466009077DD /* GotoPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GotoPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F13A4A21CD1466009077DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		70F13A4C21CD1466009077DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		70F13A4C21CD1466009077DD /* PhotoLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLocationViewController.swift; sourceTree = "<group>"; };
 		70F13A4F21CD1466009077DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70F13A5121CD1468009077DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70F13A5421CD1468009077DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +81,21 @@
 		70F13A6621CD1469009077DD /* GotoPhotoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GotoPhotoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F13A6A21CD1469009077DD /* GotoPhotoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotoPhotoUITests.swift; sourceTree = "<group>"; };
 		70F13A6C21CD1469009077DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70F13A7A21CE18BE009077DD /* ArItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArItemViewController.swift; sourceTree = "<group>"; };
+		70F13A8121CE1A78009077DD /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
+		70F13A8221CE1A78009077DD /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
+		70F13A8321CE1A78009077DD /* ARPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARPresenter.swift; sourceTree = "<group>"; };
+		70F13A8421CE1A78009077DD /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
+		70F13A8521CE1A78009077DD /* ARPresenterTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARPresenterTransform.swift; sourceTree = "<group>"; };
+		70F13A8621CE1A78009077DD /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
+		70F13A8821CE1A78009077DD /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		70F13A8921CE1A78009077DD /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		70F13A8B21CE1A78009077DD /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
+		70F13A8D21CE1A78009077DD /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
+		70F13A8E21CE1A78009077DD /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
+		70F13A8F21CE1A78009077DD /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
+		70F13A9021CE1A78009077DD /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdar_close.png; sourceTree = "<group>"; };
+		70F13AA321CE2314009077DD /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7023B10021DB0D7900EB22CE /* Realm.framework in Frameworks */,
+				7023B10121DB0D7900EB22CE /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +125,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7023B0F921DB04B100EB22CE /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				708585022206E9070033FFA5 /* PortalReader.swift */,
+				7023B0FA21DB05D000EB22CE /* PhotoLocation.swift */,
+				7023B0FC21DB08AA00EB22CE /* PhotoDatabase.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		7023B10A21E9A3BB00EB22CE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				70F13A7A21CE18BE009077DD /* ArItemViewController.swift */,
+				7023B10221DDAECE00EB22CE /* ChooseLocationTableViewController.swift */,
+				7023B10421DDAEE300EB22CE /* ChooseLocationTableViewCell.swift */,
+				7023B10621DDB21000EB22CE /* ChoosePhotoTableViewCell.swift */,
+				7023B10821DDB23E00EB22CE /* ChoosePhotoTableViewController.swift */,
+				70F13A4C21CD1466009077DD /* PhotoLocationViewController.swift */,
+				7023B10B21E9A3F000EB22CE /* UserPhotoTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		70F13A3E21CD1466009077DD = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +156,7 @@
 				70F13A5E21CD1469009077DD /* GotoPhotoTests */,
 				70F13A6921CD1469009077DD /* GotoPhotoUITests */,
 				70F13A4821CD1466009077DD /* Products */,
+				70F13A9E21CE21FC009077DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +173,10 @@
 		70F13A4921CD1466009077DD /* GotoPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				7023B10A21E9A3BB00EB22CE /* ViewControllers */,
+				7023B0F921DB04B100EB22CE /* Database */,
+				70F13A7F21CE1A78009077DD /* HDAugmentedReality */,
 				70F13A4A21CD1466009077DD /* AppDelegate.swift */,
-				70F13A4C21CD1466009077DD /* ViewController.swift */,
 				70F13A4E21CD1466009077DD /* Main.storyboard */,
 				70F13A5121CD1468009077DD /* Assets.xcassets */,
 				70F13A5321CD1468009077DD /* LaunchScreen.storyboard */,
@@ -125,6 +203,68 @@
 			path = GotoPhotoUITests;
 			sourceTree = "<group>";
 		};
+		70F13A7F21CE1A78009077DD /* HDAugmentedReality */ = {
+			isa = PBXGroup;
+			children = (
+				70F13A8021CE1A78009077DD /* Classes */,
+				70F13A8C21CE1A78009077DD /* Resources */,
+			);
+			path = HDAugmentedReality;
+			sourceTree = "<group>";
+		};
+		70F13A8021CE1A78009077DD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				70F13A8121CE1A78009077DD /* ARAnnotation.swift */,
+				70F13A8221CE1A78009077DD /* ARTrackingManager.swift */,
+				70F13A8321CE1A78009077DD /* ARPresenter.swift */,
+				70F13A8421CE1A78009077DD /* ARAnnotationView.swift */,
+				70F13A8521CE1A78009077DD /* ARPresenterTransform.swift */,
+				70F13A8621CE1A78009077DD /* ARConfiguration.swift */,
+				70F13A8721CE1A78009077DD /* External */,
+				70F13A8921CE1A78009077DD /* ARViewController.swift */,
+				70F13A8A21CE1A78009077DD /* Debug */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		70F13A8721CE1A78009077DD /* External */ = {
+			isa = PBXGroup;
+			children = (
+				70F13A8821CE1A78009077DD /* CameraView.swift */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		70F13A8A21CE1A78009077DD /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				70F13A8B21CE1A78009077DD /* DebugMapViewController.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		70F13A8C21CE1A78009077DD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				70F13A8D21CE1A78009077DD /* hdar_close@3x.png */,
+				70F13A8E21CE1A78009077DD /* hdar_close@2x.png */,
+				70F13A8F21CE1A78009077DD /* DebugMapViewController.xib */,
+				70F13A9021CE1A78009077DD /* hdar_close.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		70F13A9E21CE21FC009077DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7023B0FE21DB0D7900EB22CE /* Realm.framework */,
+				7023B0FF21DB0D7900EB22CE /* RealmSwift.framework */,
+				70F13AA321CE2314009077DD /* Kingfisher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +275,7 @@
 				70F13A4321CD1466009077DD /* Sources */,
 				70F13A4421CD1466009077DD /* Frameworks */,
 				70F13A4521CD1466009077DD /* Resources */,
+				70F13AA121CE2210009077DD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -232,6 +373,10 @@
 				70F13A5521CD1468009077DD /* LaunchScreen.storyboard in Resources */,
 				70F13A5221CD1468009077DD /* Assets.xcassets in Resources */,
 				70F13A5021CD1466009077DD /* Main.storyboard in Resources */,
+				70F13A9A21CE1A78009077DD /* hdar_close@3x.png in Resources */,
+				70F13A9B21CE1A78009077DD /* hdar_close@2x.png in Resources */,
+				70F13A9D21CE1A78009077DD /* hdar_close.png in Resources */,
+				70F13A9C21CE1A78009077DD /* DebugMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +396,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		70F13AA121CE2210009077DD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		70F13A4321CD1466009077DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70F13A4D21CD1466009077DD /* ViewController.swift in Sources */,
+				70F13A4D21CD1466009077DD /* PhotoLocationViewController.swift in Sources */,
+				7023B10321DDAECE00EB22CE /* ChooseLocationTableViewController.swift in Sources */,
+				70F13A9221CE1A78009077DD /* ARTrackingManager.swift in Sources */,
+				7023B10921DDB23E00EB22CE /* ChoosePhotoTableViewController.swift in Sources */,
 				70F13A4B21CD1466009077DD /* AppDelegate.swift in Sources */,
+				7023B0FD21DB08AA00EB22CE /* PhotoDatabase.swift in Sources */,
+				70F13A9721CE1A78009077DD /* CameraView.swift in Sources */,
+				70F13A9321CE1A78009077DD /* ARPresenter.swift in Sources */,
+				70F13A9521CE1A78009077DD /* ARPresenterTransform.swift in Sources */,
+				70F13A7B21CE18BE009077DD /* ArItemViewController.swift in Sources */,
+				7023B10721DDB21000EB22CE /* ChoosePhotoTableViewCell.swift in Sources */,
+				70F13A9921CE1A78009077DD /* DebugMapViewController.swift in Sources */,
+				70F13A9121CE1A78009077DD /* ARAnnotation.swift in Sources */,
+				7023B10521DDAEE300EB22CE /* ChooseLocationTableViewCell.swift in Sources */,
+				708585032206E9070033FFA5 /* PortalReader.swift in Sources */,
+				7023B10C21E9A3F000EB22CE /* UserPhotoTableViewCell.swift in Sources */,
+				70F13A9621CE1A78009077DD /* ARConfiguration.swift in Sources */,
+				7023B0FB21DB05D000EB22CE /* PhotoLocation.swift in Sources */,
+				70F13A9421CE1A78009077DD /* ARAnnotationView.swift in Sources */,
+				70F13A9821CE1A78009077DD /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +621,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68434A5LPG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/XCode/Carthage/Build/iOS",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/XCode/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GotoPhoto/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +646,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68434A5LPG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/XCode/Carthage/Build/iOS",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/XCode/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GotoPhoto/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

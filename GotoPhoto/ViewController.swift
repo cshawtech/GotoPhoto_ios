@@ -8,13 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-
+class PhotoLocationViewController: UIViewController
+{
+  @IBOutlet weak var arButton: UIButton!
+  var photo: PhotoLocation!
+  
+  override func viewDidLoad()
+  {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view, typically from a nib.
+  }
+  
+  
+  @IBAction func onArButton(_ sender: Any)
+  {
+    let arvc = ArItemViewController(for: [photo])
+    self.present(arvc, animated: true, completion: nil)
+  }
 }
 
