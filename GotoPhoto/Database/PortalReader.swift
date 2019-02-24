@@ -16,8 +16,62 @@ protocol PortalReaderDelegate: class
 
 class PortalReader: NSObject, URLSessionDataDelegate
 {
+  static let instance = PortalReader()
+
+  let portalBaseAddress = "https://gotophoto.appspot.com/v1"
+  let locationsApi = "locations"
+  let photolocationsApi = "locationphotos"
+  var isSynchronising = false
+  var synchroStep = 0
+  
   //properties
   weak var delegate: PortalReaderDelegate? = nil
+  
+  func synchronise()
+  {
+    if !isSynchronising
+    {
+      synchroStep = 0
+      nextSynchroniseStep()
+    }
+  }
+  
+  func nextSynchroniseStep()
+  {
+    synchroStep += 1
+    if synchroStep == 1
+    {
+      readLocations()
+    }
+    else if synchroStep == 2
+    {
+      readPhotolocations()
+    }
+    else
+    {
+      synchroStep = 0
+      isSynchronising = false
+      notifyViewer()
+    }
+  }
+  
+  func notifyViewer()
+  {
+
+  }
+  
+  func endpointFor(api: String) -> String
+  {
+    return portalBaseAddress + "/" + api
+  }
+  
+  func createRequest(apiEndpoint: String) -> URLRequest
+  {
+    let url = URL(string: apiEndpoint)!
+    let request = URLRequest(url: url)
+    
+    return request
+  }
   
   func portalSession(request: URLRequest?, successHandler: @escaping (Data) -> Void)
   {
@@ -43,16 +97,21 @@ class PortalReader: NSObject, URLSessionDataDelegate
             if let data = data
             {
               NSLog("Data Response: \(String.init(data: data, encoding: .utf8) ?? "")")
-              successHandler(data)
+              DispatchQueue.main.async {
+                successHandler(data)
+                self.nextSynchroniseStep()
+              }
             }
             else
             {
               self.delegate?.portalReaderDownloadFailed()
+              self.isSynchronising = false
             }
           }
           else
           {
             self.delegate?.portalReaderDownloadFailed()
+            self.isSynchronising = false
           }
         }
       }
@@ -67,3 +126,40 @@ class PortalReader: NSObject, URLSessionDataDelegate
   
 }
 
+extension PortalReader
+{
+  func readLocations()
+  {
+    portalSession(request: createRequest(apiEndpoint: endpointFor(api: locationsApi)), successHandler:
+      { (data: Data) -> Void in
+        let decoder = JSONDecoder()
+        do
+        {
+          let locations = try decoder.decode([Location].self, from: data)
+          PhotoDatabase.instance.updateLocations(locations: locations)
+        }
+        catch
+        {
+          
+        }
+      }
+    )
+  }
+  func readPhotolocations()
+  {
+    portalSession(request: createRequest(apiEndpoint: endpointFor(api: photolocationsApi)), successHandler:
+      { (data: Data) -> Void in
+        let decoder = JSONDecoder()
+        do
+        {
+          let photolocations = try decoder.decode([PhotoLocation].self, from: data)
+          PhotoDatabase.instance.updatePhotoLocations(photolocations: photolocations)
+        }
+        catch
+        {
+          
+        }
+      }
+    )
+  }
+}

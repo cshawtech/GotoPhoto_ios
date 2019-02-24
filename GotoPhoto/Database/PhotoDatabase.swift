@@ -20,25 +20,6 @@ class PhotoDatabase
     config.deleteRealmIfMigrationNeeded = true
     Realm.Configuration.defaultConfiguration = config
     self.realm = try! Realm()
-    //realm.deleteSafe(realm.objects(UserPhoto.self).toArray())
-    if realm.objects(PhotoLocation.self).count == 0
-    {
-      let photo1 = PhotoLocation(id: 1,
-                                 location: 1,
-                                 title: "Test Photo",
-                                 latitude: -38.296738, longitude: 145.002563,
-                                 photo_description: "Three boulders in Mt Martha Park, Victoria",
-                                 url: "https://storage.googleapis.com/gotophoto.appspot.com/boulders.jpg")
-      realm.addSafe(photo1)
-      let location1 = Location(id: 1, location: "Mt Martha Park, Victoria")
-      realm.addSafe(location1)
-      let location2 = Location(id: 2, location: "At Home")
-      realm.addSafe(location2)
-      let photo3 = PhotoLocation(id: 2, location: 2, title: "Sunflower", latitude: -38.295429, longitude: 144.992635, photo_description: "Our beautiful sunflower", url: "https://storage.googleapis.com/gotophoto.appspot.com/IMG_0024_small.jpeg")
-      let photo4 = PhotoLocation(id: 3, location: 2, title: "Lotus", latitude: -38.295467, longitude: 144.992783, photo_description: "The Lotus kinetic sculpture", url: "https://storage.googleapis.com/gotophoto.appspot.com/IMG_0025_small.jpeg")
-      realm.addSafe([photo3, photo4])
-      
-    }
   }
 
   
@@ -75,6 +56,21 @@ class PhotoDatabase
     if let photo = realm.object(ofType: UserPhoto.self, forPrimaryKey: id)
     {
       realm.deleteSafe(photo)
+    }
+  }
+  
+  func updateLocations(locations: [Location])
+  {
+    realm.update
+    {
+      realm.add(locations, update: true)
+    }
+  }
+  func updatePhotoLocations(photolocations: [PhotoLocation])
+  {
+    realm.update
+    {
+      realm.add(photolocations, update: true)
     }
   }
 }

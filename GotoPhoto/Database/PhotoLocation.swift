@@ -13,6 +13,11 @@ class Location : Object, Codable
 {
   @objc dynamic var id: Int = 0
   @objc dynamic var location: String = ""
+  @objc dynamic var detail: String = ""
+  @objc dynamic var mapview_latitude: Double = 0.0
+  @objc dynamic var mapview_longitude: Double = 0.0
+  @objc dynamic var mapview_width_m: Double = 0.0
+  @objc dynamic var mapview_height_m: Double = 0.0
   
   override static func primaryKey() -> String?
   {
@@ -28,7 +33,7 @@ class Location : Object, Codable
   }
 }
 
-class PhotoLocation : Object, LocatableItem, Codable
+class PhotoLocation : Object, Codable
 {
   @objc dynamic var id: Int = 0
   @objc dynamic var location: Int = 0
@@ -55,7 +60,28 @@ class PhotoLocation : Object, LocatableItem, Codable
     self.photo_description = photo_description
     self.url = url
   }
+}
+
+extension Location: LocatableItem
+{
+  var geolocation: Geolocation?
+  {
+    return Geolocation(latitude: mapview_latitude, longitude: mapview_longitude)
+  }
   
+  var mapLabel: String?
+  {
+    return location
+  }
+  
+  var image: URL?
+  {
+    return nil
+  }
+}
+
+extension PhotoLocation: LocatableItem
+{
   var geolocation: Geolocation?
   {
     return Geolocation(latitude: latitude, longitude: longitude)
@@ -100,7 +126,10 @@ class UserPhoto: Object
     self._fileUrl = fileUrl.lastPathComponent
     self.timestamp = Date()
   }
-  
+}
+
+extension UserPhoto
+{
   var fileUrl: URL?
   {
     let fileManager = FileManager.default

@@ -18,7 +18,7 @@ class ChooseLocationTableViewCell: UITableViewCell
     didSet
     {
       locationTitleLabel.text = location.location
-      locationDetailLabel.text = "No detail available"
+      locationDetailLabel.text = location.detail
     }
   }
   

@@ -16,7 +16,10 @@
 		7023B10721DDB21000EB22CE /* ChoosePhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023B10621DDB21000EB22CE /* ChoosePhotoTableViewCell.swift */; };
 		7023B10921DDB23E00EB22CE /* ChoosePhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023B10821DDB23E00EB22CE /* ChoosePhotoTableViewController.swift */; };
 		7023B10C21E9A3F000EB22CE /* UserPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023B10B21E9A3F000EB22CE /* UserPhotoTableViewCell.swift */; };
+		7076ACCC220C2D2F0087DE58 /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7076ACCB220C2D2F0087DE58 /* ArcGIS.bundle */; };
 		708585032206E9070033FFA5 /* PortalReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708585022206E9070033FFA5 /* PortalReader.swift */; };
+		70858506220AD36A0033FFA5 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70858505220AD36A0033FFA5 /* HomePageViewController.swift */; };
+		709B362D221FE46A00D8C89F /* MapViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B362C221FE46A00D8C89F /* MapViewCell.swift */; };
 		70F13A4B21CD1466009077DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A4A21CD1466009077DD /* AppDelegate.swift */; };
 		70F13A4D21CD1466009077DD /* PhotoLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F13A4C21CD1466009077DD /* PhotoLocationViewController.swift */; };
 		70F13A5021CD1466009077DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F13A4E21CD1466009077DD /* Main.storyboard */; };
@@ -67,7 +70,10 @@
 		7023B10621DDB21000EB22CE /* ChoosePhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePhotoTableViewCell.swift; sourceTree = "<group>"; };
 		7023B10821DDB23E00EB22CE /* ChoosePhotoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePhotoTableViewController.swift; sourceTree = "<group>"; };
 		7023B10B21E9A3F000EB22CE /* UserPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		7076ACCB220C2D2F0087DE58 /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = ../../../../SDKs/ArcGIS/iOS/Frameworks/Static/ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle; sourceTree = "<group>"; };
 		708585022206E9070033FFA5 /* PortalReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortalReader.swift; sourceTree = "<group>"; };
+		70858505220AD36A0033FFA5 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		709B362C221FE46A00D8C89F /* MapViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCell.swift; sourceTree = "<group>"; };
 		70F13A4721CD1466009077DD /* GotoPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GotoPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F13A4A21CD1466009077DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70F13A4C21CD1466009077DD /* PhotoLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLocationViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +151,8 @@
 				7023B10821DDB23E00EB22CE /* ChoosePhotoTableViewController.swift */,
 				70F13A4C21CD1466009077DD /* PhotoLocationViewController.swift */,
 				7023B10B21E9A3F000EB22CE /* UserPhotoTableViewCell.swift */,
+				70858505220AD36A0033FFA5 /* HomePageViewController.swift */,
+				709B362C221FE46A00D8C89F /* MapViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 		70F13A3E21CD1466009077DD = {
 			isa = PBXGroup;
 			children = (
+				7076ACCB220C2D2F0087DE58 /* ArcGIS.bundle */,
 				70F13A4921CD1466009077DD /* GotoPhoto */,
 				70F13A5E21CD1469009077DD /* GotoPhotoTests */,
 				70F13A6921CD1469009077DD /* GotoPhotoUITests */,
@@ -276,6 +285,7 @@
 				70F13A4421CD1466009077DD /* Frameworks */,
 				70F13A4521CD1466009077DD /* Resources */,
 				70F13AA121CE2210009077DD /* ShellScript */,
+				70858504220993170033FFA5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -376,6 +386,7 @@
 				70F13A9A21CE1A78009077DD /* hdar_close@3x.png in Resources */,
 				70F13A9B21CE1A78009077DD /* hdar_close@2x.png in Resources */,
 				70F13A9D21CE1A78009077DD /* hdar_close.png in Resources */,
+				7076ACCC220C2D2F0087DE58 /* ArcGIS.bundle in Resources */,
 				70F13A9C21CE1A78009077DD /* DebugMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +408,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		70858504220993170033FFA5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash    \nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"\n";
+		};
 		70F13AA121CE2210009077DD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -433,6 +461,7 @@
 				7023B0FD21DB08AA00EB22CE /* PhotoDatabase.swift in Sources */,
 				70F13A9721CE1A78009077DD /* CameraView.swift in Sources */,
 				70F13A9321CE1A78009077DD /* ARPresenter.swift in Sources */,
+				70858506220AD36A0033FFA5 /* HomePageViewController.swift in Sources */,
 				70F13A9521CE1A78009077DD /* ARPresenterTransform.swift in Sources */,
 				70F13A7B21CE18BE009077DD /* ArItemViewController.swift in Sources */,
 				7023B10721DDB21000EB22CE /* ChoosePhotoTableViewCell.swift in Sources */,
@@ -445,6 +474,7 @@
 				7023B0FB21DB05D000EB22CE /* PhotoLocation.swift in Sources */,
 				70F13A9421CE1A78009077DD /* ARAnnotationView.swift in Sources */,
 				70F13A9821CE1A78009077DD /* ARViewController.swift in Sources */,
+				709B362D221FE46A00D8C89F /* MapViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,12 +656,20 @@
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/XCode/Carthage/Build/iOS",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/XCode/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(HOME)/Library/SDKs/ArcGIS/iOS/Frameworks/Static",
 				);
 				INFOPLIST_FILE = GotoPhoto/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					ArcGIS,
+					"-l",
+					"c++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicfairy.GotoPhoto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -651,12 +689,20 @@
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/XCode/Carthage/Build/iOS",
 					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/XCode/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(HOME)/Library/SDKs/ArcGIS/iOS/Frameworks/Static",
 				);
 				INFOPLIST_FILE = GotoPhoto/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					ArcGIS,
+					"-l",
+					"c++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicfairy.GotoPhoto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
